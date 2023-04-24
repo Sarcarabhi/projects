@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/index.css'%}">
+        <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+        <link rel="stylesheet" href="{% static 'css/button.css'%}">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="intro">
+            <h1 class="logo-header">
+                <img src="{% static 'images/ATL.jpg'%}">
+                <span class="logo">Advanced Te</span><span class="logo">ch Labs</span>
+            </h1>
+        </div>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="{% url 'newenrollment' %}" class="active">New Enrollment</a>
+          <a href="{% url 'reciptform' %}">Fees Recipt</a>
+          <a href="{% url 'student'%}">Search Student</a>
+          <a href="{% url 'courses'%}">Courses</a>
+      </div>
+        <!-- Use any element to open the sidenav -->
+        
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+                <div class="w1">
+                    <span style="font-size:30px;cursor:pointer; margin-left:12vw;" class="fixed-top" onclick="openNav()">&#9776; Menu</span>
+                </div>
+                <div class="container mt-5">
+                    <div class="box-1">
+                        <a href="{% url 'newenrollment' %}">
+                            <button class="btn btn-one"
+                                <span>New Enrollment</span>
+                            </button>
+                        </a>
+                        </div>
+                      <br><br>
+                        <div class="box-1">
+                            <a href="{% url 'student' %}">
+                                <button class="btn btn-one">
+                                    <span>Student Search</span>
+                                </button>
+                            </a>
+                        </div>
+                      <br><br>
+                      <div class="box-1">
+                        <a href="{%url 'reciptform' %}">
+                        <button class="btn btn-one">
+                          <span>Recipt Printing</span>
+                        </button></a>
+                      </div>
+                      <br><br>
+                      <div class="box-1">
+                        <a href="{% url 'courses' %}">
+                        <button class="btn btn-one">
+                          <span>Courses</span>
+                        </button></a>
+                      </div>
+                      <br><br>
+                      <div class="box-1">
+                        <a href="stl.html">
+                        <button class="btn btn-one">
+                          <span>Scolarship Test Links(Not Operable)</span>
+                        </button></a>
+                      </div>
+                      <br><br>
+                      <div class="box-1">
+                        <a href="cfp.html">
+                        <button class="btn btn-one" >
+                          <span>Session Sheet (Not Operable)</span>
+                        </button></a>
+                      </div>
+                 </div>
+            </div>
+        </div>
+            <script src="{% static 'js/animatation.js'%}"></script>
+            <script src="{% static 'js/index.js'%}"></script>
+    </body>
+</html>

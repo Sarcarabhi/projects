@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/index.css'%}">
+        <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+        <link rel="stylesheet" href="{% static 'css/ani.css'%}">
+        <link rel="stylesheet" href="{% static 'css/courses.css'%}">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="intro">
+            <h1 class="logo-header">
+                <img src="{% static 'images/ATL.jpg'%}" >
+                <span class="logo">Advanced Te</span><span class="logo">ch Labs</span>
+            </h1>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{% url 'newenrollment' %}" class="active">New Enrollment</a>
+            <a href="{% url 'reciptform' %}">Fees Recipt</a>
+            <a href="{% url 'student'%}">Search Student</a>
+            <a href="{% url 'courses'%}">Courses</a>
+        </div>
+        <!-- Use any element to open the sidenav -->
+        
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+            <div class="w1">
+                <span style="font-size:30px;cursor:pointer; margin-left:12vw;" class="fixed-top" onclick="openNav()">&#9776; Menu</span>
+            </div>
+            <div class="tabl1">
+                <table>
+                    <tr>
+                        <th style="width: 10vw;">Category</th>
+                        <th style="width: 20vw;">Courses</th>
+                        <th style="width: 10vw;">Course Id</th>
+                        <th style="width:3vw">Duration<br>(Months)</th>
+                        <th style="width: 10vw;">Fees w/o GST</th>
+                        <th style="width:55vw">Languages</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Animation</td>
+                        <td>Animation Film Making (AFM)</td>
+                        <td>ANM-AFM_01</td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Adobe Photoshop, Adobe Illustrator, Adobe audition, Adobe Character Animator, Adobe Animate CC, Adobe Premiere PRO, Autodesk Maya</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Film Making</td>
+                        <td>ANM</td>
+                        <td>6</td>
+                        <td>Rs.54,000/-</td>
+                        <td>Photoshop, Audition, Premier , After Effects</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Animation Prime</td>
+                        <td></td>
+                        <td>24</td>
+                        <td>Rs. 2,18,000/-</td>
+                        <td>Photoshop, Audition, Premier , After Effects , 3Dx Max, Mudbox, Maya, Substance Painter, Fusion, Motion Builder, Unreal Game Engine</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Print, Web and 3D animation</td>
+                        <td></td>
+                        <td>18</td>
+                        <td>Rs.1,62,000/-</td>
+                        <td>Photoshop,Premier, Audition, After Effects, Indesign,Coreldraw,Illustrator, HTML Javascript,Dreamweaver, Animate CC, Sketch up, Lumion, 3DX Max, Mudbox,</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>AFM + Game Extension</td>
+                        <td></td>
+                        <td>18</td>
+                        <td>Rs.1,62,000/-</td>
+                        <td>AFM + Autodesk Motion Builder, Unreal Engine(RTRE), Unity(RTRE)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="6">Design</td>
+                        <td>Content Creation For Print & WEB</td>
+                        <td></td>
+                        <td>6</td>
+                        <td>Rs.54,000/-</td>
+                        <td>Adobe Photoshop, Corel Draw, Adobe Illustrator, Adobe In Design, Adobe In copy, Substance 3D stager, Adobe Dimension,</td>
+                    </tr>
+                    <tr>
+                        <td>CC Broadcast Plus</td>
+                        <td></td>
+                        <td>24</td>
+                        <td>Rs.2,18,000/-</td>
+                        <td>Adobe Photoshop, Corel Draw, Adobe Illustrator, Adobe In Design, Adobe In copy, Substance 3D stager, Adobe Dimension,<br>
+                            <b>Adobe After Effects, Adobe Premiere PRO OR FCP, Adobe Audition, Adobe animate CC, Blender OR Cinema 4d, Substance painter, Substance Stager, Meshroom</b></td>
+                    </tr>
+                    <tr>
+                        <td>Content Creation for 3D Printing</td>
+                        <td></td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Adobe Photoshop,Blender, Substance painter, Meshroom, <b>Zbrush, Keyshot PRO, 3D printing</b></td>
+                    </tr>
+                    <tr>
+                        <td>UI/UX</td>
+                        <td></td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Photoshop, Illustrator, HTML5, XD,Sketch, Figma, CSS3, Javascript, J Query, Bootstrap, Material Design</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics, Web Design and Development</td>
+                        <td></td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Photoshop, Coreldraw, Illustrator, , PHP, Animate CC, HTML, CS33 and Javascript, Wordpress</td>
+                    </tr>
+                    <tr>
+                        <td>Architectural Design</td>
+                        <td></td>
+                        <td>6</td>
+                        <td>Rs.59,000/-</td>
+                        <td>Premier.Photoshop, Lumion , Sketchup,Adobe Substance Painter ,3DX Max, V-Ray, Unity OR Unreal Engine</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">VFX</td>
+                        <td>VFX Basic</td>
+                        <td></td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Adobe Photoshop, Adobe After Effects, Mocha pro, Silhouette Studio, Adobe Premiere PRO, Foundry NUKE</td>
+                    </tr>
+                    <tr>
+                        <td>VFX Advance</td>
+                        <td></td>
+                        <td>18</td>
+                        <td>Rs.1,62,000/-</td>
+                        <td>Adobe Photoshop, Adobe After Effects, 3dEqualizer, Mocha pro, Silhouette Studio, Adobe Premiere PRO, Foundry NUKE, Autodeks MAYA, Peregrine labs YETI, GOLAEM, SideFX Houdini, PYTHON</td>
+                    </tr>
+                    <tr>
+                        <td>VFX Advance Plus</td>
+                        <td></td>
+                        <td>24</td>
+                        <td>Rs.2,18,000/-</td>
+                        <td>Adobe Photoshop, Adobe After Effects, 3dEqualizer, Mocha pro, Silhouette Studio, Adobe Premiere PRO, Foundry NUKE, Autodeks MAYA, Peregrine labs YETI, GOLAEM, SideFX Houdini, PYTHON, Unreal engine OR Unity</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="7">Coding</td>
+                        <td>Full Stack Development</td>
+                        <td></td>
+                        <td>24</td>
+                        <td>Rs.2,49,000/-</td>
+                        <td>Everything in front end development + back end development</td>
+                    </tr>
+                    <tr>
+                        <td>Android App Development</td>
+                        <td></td>
+                        <td>9</td>
+                        <td>Rs.1,12,000/-</td>
+                        <td>Java, Kotlin, Android Studio</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Data Visualisation</td>
+                        <td></td>
+                        <td>6</td>
+                        <td>Rs.54,000</td>
+                        <td>Python (Matplotlib, Seaborn, Numpy, Pandas, Plotly, Altair, Bokeh)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>6</td>
+                        <td>Rs.54,000/-</td>
+                        <td>Javascript (Fusioncharts, D3.js, Chart.js, Taucharts.js, Pts.js, Anime.js, Highcharts)</td>
+                    </tr>
+                    <tr>
+                        <td>Machine Learning</td>
+                        <td></td>
+                        <td>18</td>
+                        <td>Rs.1,62,000/-</td>
+                        <td>Python (scikitlearn, scipy, numpy, keras, tensorflow, pytorch, theano)</td>
+                    </tr>
+                    <tr>
+                        <td>Front End Development</td>
+                        <td></td>
+                        <td>9</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>HTML, CSS, Javascript, React, Angular, Vue, Bootstrap, Tailwind, jQuery, SemanticUI</td>
+                    </tr>
+                    <tr>
+                        <td>Back End Development</td>
+                        <td></td>
+                        <td>9</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Django (Python), Laravel (PHP), Express.js (Javascript), Flask (Python)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Gamming</td>
+                        <td>Advanced</td>
+                        <td></td>
+                        <td>24</td>
+                        <td>Rs.2,49,000/-</td>
+                        <td>Photoshop, Audition, Premier , 3Dx Max, Mudbox, Maya, Substance Painter, Substance Designer, Substance Sampler, Motion Builder, Unreal Game Engine, PUTHON , Unity , Vuforia SDK,</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile & Console Game design</td>
+                        <td></td>
+                        <td>18</td>
+                        <td>Rs.1,62,000/-</td>
+                        <td>Photoshop, Illustrator, Audition, 3Dx Max, Maya, Substance Painter, Quixel, Z - Brush, Motion Builder, Unreal Game Engine, Unity</td>
+                    </tr>
+                    <tr>
+                        <td>VR Design</td>
+                        <td></td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Photoshop, Illustrator, Audition, 3Dx Max, Unreal Game Engine, Unity AR Foundation,Unity</td>
+                    </tr>
+                    <tr>
+                        <td>VR Prime</td>
+                        <td></td>
+                        <td>12</td>
+                        <td>Rs.1,13,000/-</td>
+                        <td>Photoshop, Premiere, Audition, Autodesk MAYA , Zbrush, Unity, VUFORIA SDK</td>
+                    </tr>
+                </table>
+            </div>
+        </div> 
+        <script src="{% static 'js/animatation.js'%}"></script>
+        <script src="{% static 'js/index.js'%}"></script>
+        
+      
+        </body>
+        </html> 

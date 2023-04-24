@@ -1,0 +1,124 @@
+body{
+    background:white;
+    color:black;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: inherit; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: black;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+    margin-top: 5vw;
+  }
+  .w1 span{
+    background-color: inherit;
+    color: black;
+    width: 10vw;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  /* animation of image */
+  @keyframes top-center-float {
+    0% { transform: translateX(-50%) translateY(-100%) scale(0); }
+    100% { transform: translateX(-50%) translateY(0%) scale(1); }
+}
+.ima {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%) scale(0);
+    animation: top-center-float 2s ease-in-out forwards;
+}
+.forms h1{
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+.form1{
+    font-family: 'Times New Roman';
+    margin-top: 5vw;
+    
+}
+.form1 input{
+    width: 20vw;
+    height: 3vw;
+    font-size: 24px;
+    font-family: 'Times New Roman';
+    color:black;
+}
+.form1 input::placeholder{
+    font-size: 24px;
+    color:blue;
+}
+.form1 label{
+    font-size: 24px;
+    font-family: 'Times New Roman';
+}
+
+#printableArea h4{
+    font-size:1.2em;
+    text-align: center;
+    color: black;
+}
+#printableArea h6{
+    font-size:1.2em;
+    text-align: center;
+}
+hr {
+    border: none;
+    border-top: 1px solid black;
+}
+
+.ta1 table tr th,td{
+    border: 4px solid black;
+    padding: auto;
+    text-align: center;
+}
+.ta2 table tr th,td{
+    border: 4px solid black;
+    padding: auto;
+    text-align: center;
+}
+.ta3 table tr th,td{
+    border: 4px solid black;
+    padding: auto;
+    text-align: center;
+}

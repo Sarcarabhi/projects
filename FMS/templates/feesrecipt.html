@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/recipt.css'%}">
+    <title>Fee Recipt</title>
+</head>
+<body>
+    <div class="intro">
+        <h1 class="logo-header">
+            <img src="{% static 'images/ATL.jpg'%}" >
+            <span class="logo">Advanced Te</span><span class="logo">ch Labs</span>
+        </h1>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'newenrollment' %}" class="active">New Enrollment</a>
+        <a href="{% url 'reciptform' %}">Fees Recipt</a>
+        <a href="{% url 'student'%}">Search Student</a>
+        <a href="{% url 'courses'%}">Courses</a>
+    </div>
+    <!-- Use any element to open the sidenav -->
+    
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+            <div class="w1">
+                <span style="font-size:30px;cursor:pointer; margin-left:12vw;" class="fixed-top" onclick="openNav()">&#9776; Menu</span>
+            </div>
+            <button href="javascript:void(0);" onclick="printPageArea('printableArea')">Print</button>
+            <div id="printableArea">
+                <!-- <center> <img src="images/ATL.jpg" alt="" class="im"></center> -->
+                <center>
+                <h4>ADVANCED TECH LABS</h4>
+                    <h6>(A Subsidiary of Hivemind Ventures)</h6>
+                    <h6>75-R. PART-B, 3rd Floor, DHOUCHAK COMPLEX, MODEL TOWN, ROHTAK 124001 HARYANA, INDIA</h6>
+                    <h6>Telephone - Email - prashant.em13@gmail.com</h6>
+                </center>
+                <hr>
+                <center><h4>Booking confirmation</h4></center>
+                <div class="row">
+                    <div class="col-2">Name:</div>
+                    <div class="col-4">{{name}}</div>
+                    <div class="col-2">Form Number:</div>
+                    <div class="col-4">{{form_no}}</div>
+                    <div class="col-2">Address:</div>
+                    <div class="col-4">{{address}}</div>
+                    <div class="col-2">Email ID:</div>
+                    <div class="col-4">{{email}}</div>
+                    <div class="col-2" >Course Description:</div>
+                    <div class="col-4">{{course}}</div>
+                    <div class="col-2">Student ID</div>
+                    <div class="col-4">{{studentid}}</div>
+                </div>
+                <br>
+                <div class="ta1">
+                    
+                    <table>
+                        <tr>
+                            <th style="width:250px">Fee Component</th>
+                            <th style="width:250px">Gross</th>
+                            <th style="width:250px">Discount</th>
+                            <th style="width:250px">GST</th>
+                            <th style="width:250px">Total</th>
+                        </tr>
+                        <tr>
+                            <td>COURSE/TUTION FEE</td>
+                            <td>Rs. {{gross}} /-</td>
+                            <td>Rs. {{d}} /-</td>
+                            <td>Rs. {{gst}} /-</td>
+                            <td>Rs. {{t}} /-</td>
+                        </tr>
+                    </table>
+                </div>
+                    <br><br>
+                    <div class="ta2">
+                        <p>The Installment amount is Rs.{{installment}}/- for the next {{doi}} months and the amount need to be paid befor 7<sup>th</sup> of each month</p>
+                   
+                    </div>
+                <div>
+                    <p>*CHEQUES SUBJECT TO REALISATION <br>
+                        * No Change or cash can be taken in exchange of Gift Voucher<br>
+                        THIS BOOKING CONFIRMATION MUST BE FRODUCED WHEN DEMANDED<br>
+                        FEES ONCE PAID ARE NOT REFUNDABLE</p>
+                </div>
+                <div>
+                    <center><h4>SUBJECT TO TERMS AND CONDITION PRINTED OVERLEAF OF THIS BOOKING CONFIRMATION</h4></center>
+                    <br>
+                    <center><p style="font-size: 12px;">Advance Tech Labs is not a University and so does not award degree/diplomas.Students getting admitted into iploma/Degree programs through
+                        any of Advance Tech Labs Centers are subject to the rules and regulations of the University/UGC Regulations issued from time to time.Students
+                        are advised to go through the University prospetus and visit their website/UGC Regulations to ascertain the credibility,understand
+                        the rules and regulations governing the conduct of such Diploma/Degree programmes.Any change in process or delay in the conduct
+                        of the examinations or issuance of mark sheets/certificates by the University,cannot be attributed to Aptech or its centers.
+                        All Degree/diploma admissions will be done only by the University and will be subject to the rules and regulations of the University.
+                        On receipt of enrolment number/university identity card, we will update you on the same. You shall receive a Welcome mail from
+                        Onlinevarsity with the link for registration.
+                        I have read and understood the code of conduct and payment terms / installment plan mentioned above and agree to abide by them
+                        and also the terms and conditions printed overleaf.</p></center>
+                        <br><br>
+                        <p class="float-end">For ADVANCED TECH LABS</p>
+                        <br><br>
+                        <p class="float-start">For ADVANCED TECH LABS</p>
+                        <p class="float-end">AUTHORISED SIGNATORY</p><br>
+                        <hr>
+                </div>
+                <br><br>
+                <div class="ta3">
+                    Course name
+                    <table>
+                        <tr>
+                            <th style="width:300px">Software List</th>
+                            <th style="width:300px">Category </th>
+                            <th style="width:300px">Enrolled In</th>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px"> </td>
+                            <td style="height:30px"></td>
+                            <td style="height:30px"></td>
+                        </tr>
+                        
+                    </table>
+                    <p style="padding:0px">Registered Office: **************************************</p>
+                    <p style="padding:0px">Email: @@@@@@@@@@@@@@</p>
+                    <p style="padding:0px">Website:<a href="https://advancedtechlabs.com"> https://advancedtechlabs.com</a></p>
+                    <p>Disclaimer: Taxes will be charged extra, as applicable, on the date of payment.E. & O.E.</p>
+                </div>
+                <div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <center><h3>ACKNOWLEDGMENT BY THE STUDENT</h3></center>
+                    <p>Cod of conduct (CoC) for Fee installment & Payment:</p><br>
+                    <p>1. All Installment should be paid in advance/ according to the schedule mentioned on Page_2/3_.</p><br>
+                    <p>2. Installments are not according to the softwar covered, Do not devide fee by the softwares.</p><br>
+                    <hr>
+                    <p>I, {{name}} , have received Student's code of conduct and I have read and understood the code of conduct,
+                        I was also explained the rules/policy governing academic scholarship and project stipend, if applicable. I
+                        agree to abide by them in letter and in spirit.</p>
+                    <p>Student Name: <br>
+                        Booking confirmation Date: <br>
+                        Course joined: <br>
+                        Center Location: <br>
+                        For Student to fill:<br>
+                        Student Name:<br>
+                        Date:<br>
+                        Place:</p>
+                        <p class="float-end">SIGNATURE:</p><br>
+                        <p>This is a Computer Generated Statement and does not require signature.</p>
+                </div>
+            </div>
+            
+        </div>
+        <script src="{% static 'js/animatation.js'%}"></script>
+          <script src="{% static 'js/index.js'%}"></script>
+    </body>
+    </html>

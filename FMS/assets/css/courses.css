@@ -1,0 +1,44 @@
+.tabl1 table tr th,td{
+    border: 3px solid white ;
+}
+.tabl1{
+    color:white;
+    text-align: center;
+    font-size: 25px;
+}
+.tabl1 th{
+    font-size: 35px;
+}
+.given table tr th,td{
+    border: 3px solid white ;
+}
+.given th{
+    font-size: 35px;
+}
+.given{
+    color:white;
+    text-align: center;
+    font-size: 25px;
+}
+.ngiven table tr th,td{
+    border: 3px solid white ;
+}
+.ngiven th{
+    font-size: 35px;
+}
+.ngiven{
+    color:white;
+    text-align: center;
+    font-size: 25px;
+}
+.mydiv table tr th,td{
+    border: 3px solid white ;
+}
+.mydiv th{
+    font-size: 35px;
+}
+.mydiv{
+    color:white;
+    text-align: center;
+    font-size: 25px;
+    }

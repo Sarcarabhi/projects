@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/ani.css">
+        <link rel="stylesheet" href="css/courses.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="intro">
+            <h1 class="logo-header">
+                <img src="images/ATL.jpg" >
+                <span class="logo">Advanced Te</span><span class="logo">ch Labs</span>
+            </h1>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{% url 'newenrollment' %}" class="active">New Enrollment</a>
+            <a href="{% url 'reciptform' %}">Fees Recipt</a>
+            <a href="{% url 'student'%}">Search Student</a>
+            <a href="{% url 'courses'%}">Courses</a>
+        </div>
+        <!-- Use any element to open the sidenav -->
+        
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+            <div class="w1">
+                <span style="font-size:30px;cursor:pointer; margin-left:12vw;" class="fixed-top" onclick="openNav()">&#9776; Menu</span>
+            </div>
+            <div class="given">
+                <center><h1>Fees Recived This Month</h1></center><br>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Contact No.</th>
+                        <th>Fees</th>
+                        <th>Total Fees Paid</th>
+                        <th>Last Fees Recived on</th>
+                        <th>Installment</th>
+                        <th>Remaining Fees</th>
+                    </tr>
+                    <tr>
+                        <td>AAP24003</td>
+                        <td>Ravi Mishra</td>
+                        <td>9966332255</td>
+                        <td>218000</td>
+                        <td>109000</td>
+                        <td>2016-06-01</td>
+                        <td>8458.33</td>
+                        <td>109000</td>
+                    </tr>
+                </table>
+            </div>
+            <br><br><br><br><br>
+            <div class="ngiven">
+                <center><h1>Fees Not Recived This Month</h1></center><br>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Contact No.</th>
+                        <th>Fees</th>
+                        <th>Total Fees Paid</th>
+                        <th>Last Fees Recived on</th>
+                        <th>Installment</th>
+                        <th>Remaining Fees</th>
+                    </tr>
+                    <tr>
+                        <td>AAP24003</td>
+                        <td>Ravi Mishra</td>
+                        <td>9966332255</td>
+                        <td>218000</td>
+                        <td>109000</td>
+                        <td>2016-06-01</td>
+                        <td>8458.33</td>
+                        <td>109000</td>
+                    </tr>
+                </table>
+            </div>
+        </div> 
+        <script src="js/animatation.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html> 
